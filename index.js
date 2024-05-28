@@ -9,6 +9,10 @@ app.use(express.json())
 app.use(cors())
 app.use("/product",productRouter)
 
+app.use("/",(req,res,next)=>{
+    res.send({msg:"hellllo"})
+    })
+
 app.use("*",(req,res,next)=>{
 res.send({msg:"404 not founded"})
 })
